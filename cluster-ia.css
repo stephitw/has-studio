@@ -1,0 +1,1321 @@
+/* ============================================================
+   CLUSTER IA — Estilos compartidos para Pillar y Supports
+   Archivo: css/cluster-ia.css
+   Prefijo: has-cl- (cluster)
+   
+   Usado por:
+     - /agencia-ia-barcelona.html        (PILLAR)
+     - /agentes-ia-para-empresas.html     (SUPPORT)
+     - /automatizacion-con-ia.html        (SUPPORT)
+     - /chatbot-atencion-al-cliente.html  (SUPPORT)
+     - /chatbot-whatsapp-empresas.html    (SUPPORT)
+     - /consultoria-ia-para-empresas.html (SUPPORT)
+     - /formacion-ia-empresas.html        (SUPPORT)
+   ============================================================ */
+ /* ============================================================
+       AGENCIA IA BARCELONA — Landing Page Styles
+       Prefijo: has-aib- (agencia ia barcelona)
+       ============================================================ */
+
+    /* --- Breadcrumb --- */
+    .has-aib-breadcrumb {
+      padding: 0 0 1.5rem;
+      font-size: 14px;
+      color: rgba(12,12,12,.5);
+    }
+    .has-aib-breadcrumb a {
+      color: rgba(12,12,12,.5);
+      text-decoration: none;
+      transition: color .3s;
+    }
+    .has-aib-breadcrumb a:hover {
+      color: var(--orange-color);
+    }
+    .has-aib-breadcrumb span {
+      margin: 0 6px;
+    }
+
+    /* --- Hero Intro --- */
+    .has-aib-intro {
+      padding-bottom: 2rem;
+    }
+    .has-aib-intro p {
+      max-width: 780px;
+    }
+
+    /* --- Section spacing --- */
+    .has-aib-section {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(9,9,9,.08);
+    }
+    .has-aib-section:first-of-type {
+      border-top: none;
+    }
+
+    /* --- Snippet / highlight box --- */
+    .has-aib-snippet {
+      background: #f8f8f6;
+      border-left: 3px solid var(--azul-color);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    /* --- Checklist --- */
+    .has-aib-checklist {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0;
+    }
+    .has-aib-checklist li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+      font-size: 17px;
+      line-height: 26px;
+    }
+    .has-aib-checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300D9F8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* --- Signals / numbered list --- */
+    .has-aib-signals {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0;
+      counter-reset: signal-counter;
+    }
+    .has-aib-signals li {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 16px;
+      font-size: 17px;
+      line-height: 26px;
+    }
+    .has-aib-signals li::before {
+      counter-increment: signal-counter;
+      content: counter(signal-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #0c0c0c;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    /* --- Services Cards Grid --- */
+    .has-aib-services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+    .has-aib-service-card {
+      padding: 2rem;
+      border: 1px solid rgba(9,9,9,.1);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .has-aib-service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.08);
+    }
+    .has-aib-service-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .has-aib-service-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .has-aib-service-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: #0c0c0c;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .has-aib-service-card p,
+    .has-aib-service-card li {
+      font-size: 17px;
+      line-height: 26px;
+    }
+    .has-aib-service-card .has-aib-snippet {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    /* --- Process Steps --- */
+    .has-aib-process {
+      margin: 2.5rem 0;
+    }
+    .has-aib-step {
+      display: flex;
+      gap: 20px;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(9,9,9,.08);
+    }
+    .has-aib-step:last-child {
+      border-bottom: none;
+    }
+    .has-aib-step-number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: #0c0c0c;
+      color: var(--yellow-color);
+      font-weight: 600;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+    }
+    .has-aib-step-content h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .has-aib-step-content p {
+      font-size: 17px;
+      line-height: 26px;
+      margin: 0;
+      color: rgba(12,12,12,.75);
+    }
+
+    /* --- Deliverables / Requirements two-col --- */
+    .has-aib-two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .has-aib-col-block h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .has-aib-col-block h4 svg {
+      width: 22px;
+      height: 22px;
+      stroke: #0c0c0c;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* --- FAQ Accordion --- */
+    .has-aib-faq {
+      margin: 2rem 0;
+    }
+    .has-aib-faq-item {
+      border-bottom: 1px solid rgba(9,9,9,.1);
+    }
+    .has-aib-faq-item:first-child {
+      border-top: 1px solid rgba(9,9,9,.1);
+    }
+    .has-aib-faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.3rem 0;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: #0c0c0c;
+      text-align: left;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+    .has-aib-faq-question:hover {
+      color: var(--orange-color);
+    }
+    .has-aib-faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-left: 16px;
+      transition: transform .3s ease;
+    }
+    .has-aib-faq-icon line {
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+    .has-aib-faq-item.is-open .has-aib-faq-icon {
+      transform: rotate(45deg);
+    }
+    .has-aib-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0;
+    }
+    .has-aib-faq-item.is-open .has-aib-faq-answer {
+      max-height: 300px;
+      padding-bottom: 1.3rem;
+    }
+    .has-aib-faq-answer p {
+      font-size: 17px;
+      line-height: 26px;
+      margin: 0;
+      color: rgba(12,12,12,.75);
+    }
+
+    /* --- CTA Final Section --- */
+    .has-aib-cta-final {
+      background: #0c0c0c;
+      color: #fff;
+      padding: 4rem 0;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .has-aib-cta-final h2 {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .has-aib-cta-final p {
+      color: rgba(255,255,255,.7);
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .has-aib-cta-button {
+      display: inline-block;
+      padding: 16px 40px 14px;
+      background: var(--yellow-color);
+      color: #0c0c0c;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 23px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      transition: background-color .3s, color .3s;
+    }
+    .has-aib-cta-button:hover {
+      background: var(--azul-color);
+      color: #0c0c0c;
+    }
+
+    /* --- Inline CTA mid-page --- */
+    .has-aib-cta-inline {
+      text-align: center;
+      padding: 2.5rem 0;
+    }
+    .has-aib-cta-inline .button {
+      margin-top: 0;
+    }
+
+    /* --- h2 underline accent --- */
+    .has-aib-section > .container > h2 {
+      padding-bottom: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .has-aib-section > .container > h2::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--azul-color);
+      margin-top: 12px;
+    }
+
+    /* --- Cluster: BOFU 3-card block (after hero) --- */
+    .has-aib-bofu {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(9,9,9,.08);
+    }
+    .has-aib-bofu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .has-aib-bofu-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(9,9,9,.1);
+      transition: transform .3s ease, border-color .3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .has-aib-bofu-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--azul-color);
+    }
+    .has-aib-bofu-card .has-aib-service-icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .has-aib-bofu-card h3 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 6px;
+    }
+    .has-aib-bofu-card p {
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(12,12,12,.65);
+      margin: 0;
+    }
+
+    /* --- Cluster: 6-card Soluciones IA block (mid-page) --- */
+    .has-aib-cluster {
+      padding: 3.5rem 0;
+      background: #f8f8f6;
+    }
+    .has-aib-cluster h2::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--azul-color);
+      margin-top: 12px;
+    }
+    .has-aib-cluster-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .has-aib-cluster-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 1.3rem 1.5rem;
+      background: #fff;
+      border: 1px solid rgba(9,9,9,.06);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .has-aib-cluster-card:hover {
+      transform: translateX(6px);
+      box-shadow: -4px 0 0 0 var(--azul-color);
+    }
+    .has-aib-cluster-card .has-aib-card-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .has-aib-cluster-card .has-aib-card-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: #0c0c0c;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .has-aib-cluster-card strong {
+      font-size: 17px;
+      line-height: 24px;
+    }
+    .has-aib-cluster-card span {
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(12,12,12,.5);
+      display: block;
+      margin-top: 2px;
+    }
+    .has-aib-cluster-card .has-aib-card-arrow {
+      margin-left: auto;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      stroke: rgba(12,12,12,.3);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke .25s ease, transform .25s ease;
+    }
+    .has-aib-cluster-card:hover .has-aib-card-arrow {
+      stroke: var(--azul-color);
+      transform: translateX(4px);
+    }
+
+    /* --- Cluster: Siguiente paso block (before FAQ) --- */
+    .has-aib-next {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(9,9,9,.08);
+    }
+    .has-aib-next h2::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--yellow-color);
+      margin-top: 12px;
+    }
+    .has-aib-next-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .has-aib-next-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 1.5rem;
+      background: #0c0c0c;
+      color: #fff;
+      text-decoration: none;
+      transition: transform .25s ease, background-color .25s ease;
+    }
+    .has-aib-next-card:hover {
+      transform: translateY(-3px);
+      background: #1a1a1a;
+    }
+    .has-aib-next-card .has-aib-card-icon svg {
+      stroke: var(--yellow-color);
+    }
+    .has-aib-next-card strong {
+      font-size: 17px;
+      color: #fff;
+    }
+    .has-aib-next-card span {
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+      display: block;
+      margin-top: 2px;
+    }
+    .has-aib-next-card .has-aib-card-arrow {
+      stroke: rgba(255,255,255,.3);
+    }
+    .has-aib-next-card:hover .has-aib-card-arrow {
+      stroke: var(--yellow-color);
+      transform: translateX(4px);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (min-width: 768px) {
+      .has-aib-services-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .has-aib-two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+      .has-aib-cta-final {
+        padding: 5rem 0;
+      }
+      .has-aib-bofu-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .has-aib-cluster-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .has-aib-next-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .has-aib-section {
+        padding: 4rem 0;
+      }
+      .has-aib-cta-final {
+        padding: 6rem 0;
+        margin-top: 4rem;
+      }
+      .has-aib-cta-final h2 {
+        font-size: 48px;
+        line-height: 54px;
+      }
+      .has-aib-step-content h4 {
+        font-size: 22px;
+      }
+      .has-aib-service-card {
+        padding: 2.5rem;
+      }
+      .has-aib-faq-question {
+        font-size: 20px;
+      }
+      .has-aib-cluster {
+        padding: 5rem 0;
+      }
+      .has-aib-cluster-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .has-aib-bofu {
+        padding: 4rem 0;
+      }
+      .has-aib-next {
+        padding: 4rem 0;
+      }
+    }
+
+    @media (min-width: 1800px) {
+      .has-aib-section {
+        padding: 5rem 0;
+      }
+    }
+
+/* ==============================================
+   1. BASE — Breadcrumb, Intro, Secciones
+   ============================================== */
+
+/* --- Breadcrumb --- */
+.has-cl-breadcrumb {
+  padding: 0 0 1.5rem;
+  font-size: 14px;
+  color: rgba(12,12,12,.5);
+}
+.has-cl-breadcrumb a {
+  color: rgba(12,12,12,.5);
+  text-decoration: none;
+  transition: color .3s;
+}
+.has-cl-breadcrumb a:hover {
+  color: var(--orange-color);
+}
+.has-cl-breadcrumb span {
+  margin: 0 6px;
+}
+
+/* --- Hero Intro --- */
+.has-cl-intro {
+  padding-bottom: 2rem;
+}
+.has-cl-intro p {
+  max-width: 780px;
+}
+
+/* --- Section spacing --- */
+.has-cl-section {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(9,9,9,.08);
+}
+.has-cl-section:first-of-type {
+  border-top: none;
+}
+
+/* --- h2 underline accent (dentro de secciones) --- */
+.has-cl-section > .container > h2 {
+  padding-bottom: 12px;
+  margin-bottom: 1.5rem;
+}
+.has-cl-section > .container > h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--azul-color);
+  margin-top: 12px;
+}
+
+
+/* ==============================================
+   2. CONTENIDO — Snippets, Checklists, Signals
+   ============================================== */
+
+/* --- Snippet / highlight box --- */
+.has-cl-snippet {
+  background: #f8f8f6;
+  border-left: 3px solid var(--azul-color);
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+/* --- Checklist (✓ cyan) --- */
+.has-cl-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+.has-cl-checklist li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 26px;
+}
+.has-cl-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300D9F8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* --- Signals / numbered list (circulos negros) --- */
+.has-cl-signals {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+  counter-reset: signal-counter;
+}
+.has-cl-signals li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 26px;
+}
+.has-cl-signals li::before {
+  counter-increment: signal-counter;
+  content: counter(signal-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0c0c0c;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* --- Errors list (✕ orange) — para supports --- */
+.has-cl-errors {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+.has-cl-errors > li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 26px;
+}
+.has-cl-errors > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ec542f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.has-cl-errors > li > p {
+  margin: 4px 0 0;
+  font-size: 16px;
+  color: rgba(12,12,12,.65);
+}
+
+/* --- Example box (inline en cards) — para supports --- */
+.has-cl-example {
+  background: #f0f0ee;
+  padding: 1rem 1.3rem;
+  margin-top: 1rem;
+  font-size: 16px;
+  line-height: 24px;
+}
+.has-cl-example strong {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  color: rgba(12,12,12,.45);
+}
+
+
+/* ==============================================
+   3. CARDS — Servicios, Casos de uso
+   ============================================== */
+
+/* --- Service / Case cards grid --- */
+.has-cl-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+.has-cl-card {
+  padding: 2rem;
+  border: 1px solid rgba(9,9,9,.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.has-cl-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.08);
+}
+.has-cl-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.has-cl-card p,
+.has-cl-card li {
+  font-size: 17px;
+  line-height: 26px;
+}
+.has-cl-card .has-cl-snippet {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* --- Card icon (dentro de h3) --- */
+.has-cl-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.has-cl-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: #0c0c0c;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==============================================
+   4. PROCESS — Steps numerados
+   ============================================== */
+
+.has-cl-process {
+  margin: 2.5rem 0;
+}
+.has-cl-step {
+  display: flex;
+  gap: 20px;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(9,9,9,.08);
+}
+.has-cl-step:last-child {
+  border-bottom: none;
+}
+.has-cl-step-number {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #0c0c0c;
+  color: var(--yellow-color);
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.has-cl-step-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.has-cl-step-content p {
+  font-size: 17px;
+  line-height: 26px;
+  margin: 0;
+  color: rgba(12,12,12,.75);
+}
+
+
+/* ==============================================
+   5. TWO-COL — Entregables / Requisitos
+   ============================================== */
+
+.has-cl-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.has-cl-col-block h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.has-cl-col-block h4 svg {
+  width: 22px;
+  height: 22px;
+  stroke: #0c0c0c;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==============================================
+   6. CTA — Inline y Final
+   ============================================== */
+
+/* --- Inline CTA mid-page --- */
+.has-cl-cta-inline {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.has-cl-cta-inline .button {
+  margin-top: 0;
+}
+
+/* --- CTA Final Section (bloque oscuro) --- */
+.has-cl-cta-final {
+  background: #0c0c0c;
+  color: #fff;
+  padding: 4rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+.has-cl-cta-final h2 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+.has-cl-cta-final p {
+  color: rgba(255,255,255,.7);
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  font-size: 18px;
+  line-height: 28px;
+}
+.has-cl-cta-button {
+  display: inline-block;
+  padding: 16px 40px 14px;
+  background: var(--yellow-color);
+  color: #0c0c0c;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  transition: background-color .3s, color .3s;
+}
+.has-cl-cta-button:hover {
+  background: var(--azul-color);
+  color: #0c0c0c;
+}
+
+
+/* ==============================================
+   7. FAQ — Accordion
+   ============================================== */
+
+.has-cl-faq {
+  margin: 2rem 0;
+}
+.has-cl-faq-item {
+  border-bottom: 1px solid rgba(9,9,9,.1);
+}
+.has-cl-faq-item:first-child {
+  border-top: 1px solid rgba(9,9,9,.1);
+}
+.has-cl-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #0c0c0c;
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.has-cl-faq-question:hover {
+  color: var(--orange-color);
+}
+.has-cl-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  transition: transform .3s ease;
+}
+.has-cl-faq-icon line {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.has-cl-faq-item.is-open .has-cl-faq-icon {
+  transform: rotate(45deg);
+}
+.has-cl-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+  padding: 0;
+}
+.has-cl-faq-item.is-open .has-cl-faq-answer {
+  max-height: 300px;
+  padding-bottom: 1.3rem;
+}
+.has-cl-faq-answer p {
+  font-size: 17px;
+  line-height: 26px;
+  margin: 0;
+  color: rgba(12,12,12,.75);
+}
+
+
+/* ==============================================
+   8. CLUSTER NAV — Pillar navigation blocks
+   ============================================== */
+
+/* --- Shared icon/arrow for nav cards --- */
+.has-cl-card-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.has-cl-card-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #0c0c0c;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.has-cl-card-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  stroke: rgba(12,12,12,.3);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke .25s ease, transform .25s ease;
+}
+
+/* --- BOFU 3-card block (pillar, después del hero) --- */
+.has-cl-bofu {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(9,9,9,.08);
+}
+.has-cl-bofu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.has-cl-bofu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(9,9,9,.1);
+  transition: transform .3s ease, border-color .3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.has-cl-bofu-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--azul-color);
+}
+.has-cl-bofu-card .has-cl-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.has-cl-bofu-card h3 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+.has-cl-bofu-card p {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(12,12,12,.65);
+  margin: 0;
+}
+
+/* --- Cluster 6-card grid (pillar, mitad de página) --- */
+.has-cl-cluster {
+  padding: 3.5rem 0;
+  background: #f8f8f6;
+}
+.has-cl-cluster h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--azul-color);
+  margin-top: 12px;
+}
+.has-cl-cluster-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+.has-cl-cluster-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 1.3rem 1.5rem;
+  background: #fff;
+  border: 1px solid rgba(9,9,9,.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.has-cl-cluster-card:hover {
+  transform: translateX(6px);
+  box-shadow: -4px 0 0 0 var(--azul-color);
+}
+.has-cl-cluster-card strong {
+  font-size: 17px;
+  line-height: 24px;
+}
+.has-cl-cluster-card span {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(12,12,12,.5);
+  display: block;
+  margin-top: 2px;
+}
+.has-cl-cluster-card:hover .has-cl-card-arrow {
+  stroke: var(--azul-color);
+  transform: translateX(4px);
+}
+
+/* --- Siguiente paso (pillar, antes de FAQs — cards oscuras) --- */
+.has-cl-next {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(9,9,9,.08);
+}
+.has-cl-next h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--yellow-color);
+  margin-top: 12px;
+}
+.has-cl-next-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.has-cl-next-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 1.5rem;
+  background: #0c0c0c;
+  color: #fff;
+  text-decoration: none;
+  transition: transform .25s ease, background-color .25s ease;
+}
+.has-cl-next-card:hover {
+  transform: translateY(-3px);
+  background: #1a1a1a;
+}
+.has-cl-next-card .has-cl-card-icon svg {
+  stroke: var(--yellow-color);
+}
+.has-cl-next-card strong {
+  font-size: 17px;
+  color: #fff;
+}
+.has-cl-next-card span {
+  font-size: 14px;
+  color: rgba(255,255,255,.5);
+  display: block;
+  margin-top: 2px;
+}
+.has-cl-next-card .has-cl-card-arrow {
+  stroke: rgba(255,255,255,.3);
+}
+.has-cl-next-card:hover .has-cl-card-arrow {
+  stroke: var(--yellow-color);
+  transform: translateX(4px);
+}
+
+/* --- Related / Crosslinks block (supports, antes de FAQs) --- */
+.has-cl-related {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(9,9,9,.08);
+}
+.has-cl-related h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--azul-color);
+  margin-top: 12px;
+}
+.has-cl-related-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.has-cl-related-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 1.3rem 1.5rem;
+  background: #f8f8f6;
+  border: 1px solid rgba(9,9,9,.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.has-cl-related-card:hover {
+  transform: translateX(6px);
+  box-shadow: -4px 0 0 0 var(--azul-color);
+}
+.has-cl-related-card strong {
+  font-size: 17px;
+  line-height: 24px;
+}
+.has-cl-related-card span {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(12,12,12,.5);
+  display: block;
+  margin-top: 2px;
+}
+.has-cl-related-card:hover .has-cl-card-arrow {
+  stroke: var(--azul-color);
+  transform: translateX(4px);
+}
+
+
+/* ==============================================
+   9. RESPONSIVE
+   ============================================== */
+
+@media (min-width: 768px) {
+  .has-cl-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .has-cl-two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .has-cl-bofu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .has-cl-cluster-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .has-cl-next-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .has-cl-related-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .has-cl-cta-final {
+    padding: 5rem 0;
+  }
+}
+
+/* Pillar: service cards 3-col */
+@media (min-width: 768px) {
+  .has-cl-cards-grid--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .has-cl-section {
+    padding: 4rem 0;
+  }
+  .has-cl-cta-final {
+    padding: 6rem 0;
+    margin-top: 4rem;
+  }
+  .has-cl-cta-final h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .has-cl-step-content h4 {
+    font-size: 22px;
+  }
+  .has-cl-card {
+    padding: 2.5rem;
+  }
+  .has-cl-faq-question {
+    font-size: 20px;
+  }
+  .has-cl-cluster {
+    padding: 5rem 0;
+  }
+  .has-cl-cluster-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .has-cl-bofu {
+    padding: 4rem 0;
+  }
+  .has-cl-next {
+    padding: 4rem 0;
+  }
+  .has-cl-related {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .has-cl-section {
+    padding: 5rem 0;
+  }
+}
