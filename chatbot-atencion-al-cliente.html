@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot para atención al cliente | Implementación y calidad</title>
+  <meta name="description" content="Chatbot para atención al cliente: mejores prácticas, captación de leads y factores de precio para empresa. Implementación clara. Agenda una reunión.">
+  <meta http-equiv="content-language" content="es_ES" />
+  <meta name="robots" content="index, follow" />
+  <link href="https://has-studio.com/chatbot-atencion-al-cliente.html" rel="canonical" />
+  <meta name="author" content="HAS Studio" />
+  <meta property="og:title" content="Chatbot para atención al cliente | Implementación y calidad" />
+  <meta property="og:description" content="Chatbot para atención al cliente: mejores prácticas, captación de leads y factores de precio para empresa. Implementación clara." />
+  <meta property="og:site_name" content="HAS Studio: Agencia IA y Diseño Web Barcelona" />
+  <meta property="og:url" content="https://has-studio.com/chatbot-atencion-al-cliente.html" />
+  <meta property="og:type" content="website" />
+  <meta name="url" content="https://has-studio.com/" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/cluster-ia.css" rel="stylesheet" />
+  <link href="img/favicon.png" rel="shortcut icon" type="image/png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://has-studio.com/#organization",
+        "name": "HAS Studio",
+        "url": "https://has-studio.com"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#webpage",
+        "url": "https://has-studio.com/chatbot-atencion-al-cliente.html",
+        "name": "Chatbot para atención al cliente: implementación y mejores prácticas",
+        "isPartOf": { "@id": "https://has-studio.com/#organization" },
+        "inLanguage": "es-ES",
+        "about": {
+          "@type": "Service",
+          "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#service"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#service",
+        "name": "chatbot para atención al cliente",
+        "provider": { "@id": "https://has-studio.com/#organization" },
+        "inLanguage": "es-ES",
+        "description": "Servicio y guía sobre chatbot para atención al cliente, incluyendo precio chatbot para atención al cliente empresa, mejores prácticas chatbot atención al cliente y chatbot para captación de leads."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://has-studio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Agencia IA Barcelona",
+            "item": "https://has-studio.com/agencia-ia-barcelona.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Chatbot para atención al cliente",
+            "item": "https://has-studio.com/chatbot-atencion-al-cliente.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#faq",
+        "isPartOf": { "@id": "https://has-studio.com/chatbot-atencion-al-cliente.html#webpage" },
+        "inLanguage": "es-ES",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué hace exactamente un chatbot para atención al cliente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un chatbot para atención al cliente responde dudas frecuentes, guía al usuario en pasos básicos y reduce tiempos de respuesta. Debe tener límites claros y derivar a una persona cuando el caso lo requiere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo conviene implementar un chatbot para atención al cliente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conviene cuando hay repetición de consultas, tiempos de respuesta altos o falta de consistencia. Un chatbot para atención al cliente aporta orden y reduce fricción si el alcance está bien definido."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son las mejores prácticas chatbot atención al cliente para que funcione bien?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Las mejores prácticas chatbot atención al cliente incluyen alcance claro, respuestas breves, opciones ordenadas, derivación sin fricción y revisión periódica con ejemplos reales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué diferencia hay entre chatbot para atención al cliente y chatbot para captación de leads?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un chatbot para atención al cliente prioriza resolver dudas y guiar. Un chatbot para captación de leads prioriza ordenar solicitudes, recopilar datos mínimos y facilitar el contacto con un siguiente paso claro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿De qué depende el precio chatbot para atención al cliente empresa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El precio chatbot para atención al cliente empresa depende del alcance, del contenido que debe cubrir, del control de calidad (validación) y del mantenimiento (mejora continua)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se asegura la calidad siguiendo mejores prácticas chatbot atención al cliente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aplicando mejores prácticas chatbot atención al cliente: respuestas claras, límites definidos, derivación rápida a humano y revisión continua con conversaciones reales para ajustar sin perder consistencia."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- INICIO: estilos-chatbot-atencion (solo componentes exclusivos) -->
+  <style>
+    /* ============================================================
+       CHATBOT ATENCIÓN AL CLIENTE — Estilos exclusivos
+       Prefijo: has-chat-
+       Componentes compartidos: usa has-cl- de cluster-ia.css
+       ============================================================ */
+
+    /* --- Do / Don't two-col block --- */
+    .has-chat-do-dont {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .has-chat-do-dont-col h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .has-chat-do-dont-col h4 svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .has-chat-do h4 svg { stroke: var(--azul-color); }
+    .has-chat-dont h4 svg { stroke: var(--orange-color); }
+
+    /* --- Price factors table --- */
+    .has-chat-factors {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 15px;
+      line-height: 22px;
+    }
+    .has-chat-factors thead th {
+      background: #0c0c0c;
+      color: var(--yellow-color);
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .has-chat-factors tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(9,9,9,.08);
+      vertical-align: top;
+    }
+    .has-chat-factors tbody tr:hover {
+      background: rgba(0,217,248,.04);
+    }
+    .has-chat-factors tbody td:first-child {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* --- Three rules block --- */
+    .has-chat-rules {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+    .has-chat-rule {
+      padding: 1.3rem 1.5rem;
+      background: #f8f8f6;
+      border-left: 3px solid var(--azul-color);
+    }
+    .has-chat-rule strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+    .has-chat-rule p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(12,12,12,.7);
+    }
+
+    /* --- Responsive --- */
+    @media (min-width: 768px) {
+      .has-chat-do-dont {
+        grid-template-columns: 1fr 1fr;
+      }
+      .has-chat-rules {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .has-chat-factors {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .has-chat-factors thead th,
+      .has-chat-factors tbody td {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+  <!-- FIN: estilos-chatbot-atencion -->
+
+</head>
+<body id="body-home">
+
+  <!-- INICIO: nav-mobile -->
+  <div class="hamburguer-mobile">
+    <a class="custom-logo-link-mobil" href="https://has-studio.com/" id="logo-mobil">
+      <img alt="Logo móvil de HAS Studio Barcelona" id="logo-mobil-img" src="img/logo-has-studio-barcelona.recortado.png" width="180" height="auto" />
+    </a>
+    <input type="checkbox" aria-label="Alternar menú de navegación">
+    <a class="show" role="button" aria-expanded="false" aria-controls="show">&#9776;</a>
+    <a class="close" role="button" aria-expanded="true" aria-controls="show">+</a>
+    <nav class="nav" id="show">
+      <ul>
+        <li><a href="/servicios-ia-automatizacion.html">IA</a></li>
+        <li><a href="/serviciosweb.html">Servicios</a></li>
+        <li><a href="/proyectos.html">Proyectos</a></li>
+        <li><a href="/nosotros.html">Nosotros</a></li>
+        <li><a href="/contacto.html">Contacto</a></li>
+        <li><a href="https://has-studio.com" class="active-lang">ES</a><span> | </span><a href="https://has-studio.com/en" class="lang">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- FIN: nav-mobile -->
+
+  <!-- INICIO: header-desktop -->
+  <header class="site-header header" id="navbar" role="banner">
+    <div id="logoat">
+      <a class="custom-logo-link" href="https://has-studio.com/" id="logo">
+        <img alt="Logo de HAS Studio Barcelona" id="logo-img" src="img/logo-has-studio-barcelona.recortado.png" width="180" height="auto" />
+      </a>
+    </div>
+    <nav class="site-title navbar navbar-nav" aria-label="Menú de navegación principal">
+      <ul>
+        <li class="page_item"><a href="/servicios-ia-automatizacion.html">Soluciones IA</a></li>
+        <li class="page_item"><a href="/serviciosweb.html">Servicios</a></li>
+        <li class="page_item"><a href="/proyectos.html">Proyectos</a></li>
+        <li class="page_item"><a href="/nosotros.html">Nosotros</a></li>
+        <li class="page_item"><a href="/contacto.html">Contacto</a></li>
+        <li><a href="https://has-studio.com/" class="active-lang">ES</a><span> | </span><a href="https://has-studio.com/en" class="lang">EN</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- FIN: header-desktop -->
+
+
+  <!-- INICIO: main-content -->
+  <main class="site-content main services-ai">
+
+    <!-- INICIO: hero -->
+    <section class="hero">
+      <div class="container">
+        <nav class="has-cl-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Inicio</a><span>›</span><a href="/agencia-ia-barcelona.html">Agencia IA Barcelona</a><span>›</span><strong>Chatbot para atención al cliente</strong>
+        </nav>
+
+        <h1 class="h1">Chatbot para atención al cliente: implementación y mejores prácticas</h1>
+
+        <div class="has-cl-intro">
+          <!-- INTERLINKING: enlace de vuelta a la Pillar (obligatorio) -->
+          <p>Un <strong>chatbot para atención al cliente</strong> tiene una misión simple: responder con consistencia, reducir fricción y ayudar a que el usuario llegue al siguiente paso sin esperar. Si estás aquí, probablemente no quieres "un chat bonito", sino una solución que funcione en la práctica, sin afectar la experiencia. Como <a href="/agencia-ia-barcelona.html"><strong>agencia ia barcelona</strong></a> especializada en IA aplicada, diseñamos chatbots con este enfoque.</p>
+
+          <p>Esta página te ayuda a decidir: qué puede resolver un <strong>chatbot para atención al cliente</strong>, cuáles son las <strong>mejores prácticas chatbot atención al cliente</strong> para mantener calidad y cómo entender el <strong>precio chatbot para atención al cliente empresa</strong> sin caer en promesas vacías.</p>
+        </div>
+      </div>
+    </section>
+    <!-- FIN: hero -->
+
+
+    <!-- INICIO: que-resuelve -->
+    <section class="has-cl-section" id="que-resuelve">
+      <div class="container">
+        <h2>Qué resuelve un chatbot para atención al cliente</h2>
+
+        <p>Un <strong>chatbot para atención al cliente</strong> suele aportar valor cuando hay repetición: las mismas dudas, los mismos pasos y la misma información que el equipo responde una y otra vez.</p>
+
+        <div class="has-cl-snippet">
+          <p>Un <strong>chatbot para atención al cliente</strong> resuelve preguntas frecuentes, guía al usuario en pasos básicos y reduce tiempos de respuesta. Funciona mejor cuando hay reglas claras de qué responder y cuándo derivar a una persona.</p>
+        </div>
+
+        <p><strong>Situaciones donde suele encajar:</strong></p>
+        <ul class="has-cl-checklist">
+          <li>Cuando el equipo recibe consultas repetidas y se pierde tiempo.</li>
+          <li>Cuando hay picos de demanda y no se llega a responder bien.</li>
+          <li>Cuando se quiere una atención consistente en todo momento.</li>
+        </ul>
+
+        <p>Lo importante: un <strong>chatbot para atención al cliente</strong> no tiene por qué "resolverlo todo". Debe resolver bien lo que está definido y derivar el resto.</p>
+      </div>
+    </section>
+    <!-- FIN: que-resuelve -->
+
+
+    <!-- INICIO: mejores-practicas -->
+    <section class="has-cl-section" id="mejores-practicas">
+      <div class="container">
+        <h2>Mejores prácticas chatbot atención al cliente para no perder calidad</h2>
+
+        <p>La diferencia entre un chatbot que ayuda y uno que molesta está en el diseño y el control. Estas <strong>mejores prácticas chatbot atención al cliente</strong> son las que evitan problemas típicos.</p>
+
+        <div class="has-cl-snippet">
+          <p>Las <strong>mejores prácticas chatbot atención al cliente</strong> consisten en definir alcance, mantener respuestas claras, crear un camino de derivación y revisar el rendimiento con ejemplos reales para mejorar sin perder consistencia.</p>
+        </div>
+
+        <h3>Qué debe hacer y qué no debe hacer</h3>
+
+        <div class="has-chat-do-dont">
+          <div class="has-chat-do-dont-col has-chat-do">
+            <h4>
+              <!-- Check icon -->
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Debe hacer
+            </h4>
+            <ul class="has-cl-checklist">
+              <li>Responder dudas frecuentes de forma breve y clara.</li>
+              <li>Guiar al usuario a un siguiente paso concreto.</li>
+              <li>Pedir la información mínima cuando toca.</li>
+              <li>Derivar a una persona cuando el caso lo requiere.</li>
+            </ul>
+          </div>
+          <div class="has-chat-do-dont-col has-chat-dont">
+            <h4>
+              <!-- X icon -->
+              <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              No debe hacer
+            </h4>
+            <ul class="has-cl-errors">
+              <li><strong>Inventar respuestas cuando no tiene información.</strong></li>
+              <li><strong>Alargar conversaciones sin resolver nada.</strong></li>
+              <li><strong>Forzar "autonomía total" si el caso necesita humano.</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Cómo evitar respuestas confusas</h3>
+
+        <p>Aplicando <strong>mejores prácticas chatbot atención al cliente</strong>, lo más efectivo es trabajar con tres reglas simples:</p>
+
+        <div class="has-chat-rules">
+          <div class="has-chat-rule">
+            <strong>Respuestas cortas y accionables</strong>
+            <p>Que el usuario entienda qué hacer en segundos.</p>
+          </div>
+          <div class="has-chat-rule">
+            <strong>Opciones claras</strong>
+            <p>Si hay alternativas, que el chatbot las ofrezca de forma ordenada.</p>
+          </div>
+          <div class="has-chat-rule">
+            <strong>Derivación sin fricción</strong>
+            <p>Cuando el caso no encaja, se deriva rápido y con contexto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN: mejores-practicas -->
+
+
+    <!-- INICIO: captacion-leads -->
+    <section class="has-cl-section" id="captacion-leads">
+      <div class="container">
+        <h2>Chatbot para captación de leads: cuándo conviene y cómo integrarlo</h2>
+
+        <p>Un <strong>chatbot para captación de leads</strong> es útil cuando quieres convertir una conversación inicial en una oportunidad real, sin que el equipo tenga que estar siempre disponible.</p>
+
+        <div class="has-cl-snippet">
+          <p>Un <strong>chatbot para captación de leads</strong> conviene cuando la prioridad es ordenar solicitudes, recopilar información mínima y facilitar el contacto. Funciona mejor si el objetivo está definido y el siguiente paso es claro.</p>
+        </div>
+
+        <p><strong>Ejemplos de uso práctico:</strong></p>
+        <ul class="has-cl-checklist">
+          <li>Hacer 3–5 preguntas para entender la necesidad.</li>
+          <li>Confirmar datos básicos para continuar.</li>
+          <li>Entregar un resumen listo para el equipo.</li>
+          <li>Proponer el siguiente paso (por ejemplo, agendar una llamada).</li>
+        </ul>
+
+        <!-- INTERLINKING: crosslink contextual a chatbot WhatsApp -->
+        <p>Un buen <strong>chatbot para captación de leads</strong> no "vende" por sí solo: reduce fricción para que el usuario llegue al contacto con más claridad. Si tu canal principal es WhatsApp, puedes combinarlo con un <a href="/chatbot-whatsapp-empresas.html"><strong>chatbot whatsapp para empresas</strong></a> para cubrir ese canal de forma consistente.</p>
+      </div>
+    </section>
+    <!-- FIN: captacion-leads -->
+
+
+    <!-- INICIO: precio -->
+    <section class="has-cl-section" id="precio">
+      <div class="container">
+        <h2>Precio chatbot para atención al cliente empresa: de qué depende</h2>
+
+        <p>El <strong>precio chatbot para atención al cliente empresa</strong> no se entiende bien si se pregunta solo "cuánto cuesta", porque depende de alcance y control de calidad. Aquí lo dejamos claro sin inventar cifras.</p>
+
+        <div class="has-cl-snippet">
+          <p>El <strong>precio chatbot para atención al cliente empresa</strong> depende del alcance (qué cubre), del contenido (qué respuestas debe manejar), del control de calidad (validación y revisión) y del mantenimiento (mejora continua).</p>
+        </div>
+
+        <h3>Alcance, contenido y validación</h3>
+
+        <table class="has-chat-factors">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Qué implica</th>
+              <th>Impacto en precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alcance</td>
+              <td>Cuántos temas cubre el chatbot</td>
+              <td>Más temas = más diseño conversacional</td>
+            </tr>
+            <tr>
+              <td>Contenido</td>
+              <td>Cuántas respuestas y flujos hay que preparar</td>
+              <td>Más flujos = más configuración</td>
+            </tr>
+            <tr>
+              <td>Validación</td>
+              <td>Cómo se revisa la calidad para evitar errores</td>
+              <td>Más control = más consistencia</td>
+            </tr>
+            <tr>
+              <td>Derivación</td>
+              <td>Cómo se gestiona el paso a una persona</td>
+              <td>Mejor experiencia = más lógica de escalado</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Si buscas calidad, el <strong>precio chatbot para atención al cliente empresa</strong> suele subir cuando se exige más control y más cobertura. No es un "extra": es lo que evita experiencias malas.</p>
+
+        <h3>Puesta en marcha y mejora continua</h3>
+
+        <p>Un <strong>chatbot para atención al cliente</strong> no se "instala y ya". Para mantener resultados, hay que revisar conversaciones reales y ajustar. Parte del <strong>precio chatbot para atención al cliente empresa</strong> se explica por:</p>
+
+        <ul class="has-cl-checklist">
+          <li>Ajustes tras las primeras semanas.</li>
+          <li>Mejora continua con ejemplos reales.</li>
+          <li>Actualización de respuestas cuando cambian procesos.</li>
+        </ul>
+      </div>
+    </section>
+    <!-- FIN: precio -->
+
+
+    <!-- INICIO: como-trabajamos -->
+    <section class="has-cl-section" id="proceso">
+      <div class="container">
+        <h2>Cómo trabajamos para implementar tu chatbot para atención al cliente</h2>
+
+        <p>Si estás en fase de decisión, esto es lo que deberías esperar como proceso para un <strong>chatbot para atención al cliente</strong>.</p>
+
+        <div class="has-cl-process">
+
+          <div class="has-cl-step">
+            <span class="has-cl-step-number">1</span>
+            <div class="has-cl-step-content">
+              <h4>Definición de alcance</h4>
+              <p>Qué cubre y qué no cubre el chatbot.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-step">
+            <span class="has-cl-step-number">2</span>
+            <div class="has-cl-step-content">
+              <h4>Diseño de conversación</h4>
+              <p>Estructura de preguntas y respuestas con criterios claros.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-step">
+            <span class="has-cl-step-number">3</span>
+            <div class="has-cl-step-content">
+              <h4>Aplicación de mejores prácticas</h4>
+              <p>Respuestas breves, opciones claras, derivación sin fricción.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-step">
+            <span class="has-cl-step-number">4</span>
+            <div class="has-cl-step-content">
+              <h4>Prueba con casos reales</h4>
+              <p>Se revisa con ejemplos reales y se ajusta.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-step">
+            <span class="has-cl-step-number">5</span>
+            <div class="has-cl-step-content">
+              <h4>Puesta en marcha + mejora</h4>
+              <p>Se monitoriza y se ajusta para mantener calidad.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- INTERLINKING: crosslink contextual a consultoría -->
+        <p>Si no tienes claro el alcance o necesitas un diagnóstico previo, una <a href="/consultoria-ia-para-empresas.html"><strong>consultoría de ia para empresas</strong></a> te ayuda a definir prioridades antes de diseñar el chatbot.</p>
+      </div>
+    </section>
+    <!-- FIN: como-trabajamos -->
+
+
+    <!-- INICIO: bloque-relacionado (crosslinks del cluster — antes de FAQs) -->
+    <section class="has-cl-related" id="relacionado">
+      <div class="container">
+        <h2>Relacionado</h2>
+
+        <div class="has-cl-related-grid">
+
+          <!-- Crosslink 1: chatbot WhatsApp -->
+          <a href="/chatbot-whatsapp-empresas.html" class="has-cl-related-card">
+            <span class="has-cl-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </span>
+            <div><strong>Chatbot WhatsApp para empresas</strong><span>Automatiza tu canal de WhatsApp Business</span></div>
+            <svg class="has-cl-card-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <!-- Crosslink 2: consultoría -->
+          <a href="/consultoria-ia-para-empresas.html" class="has-cl-related-card">
+            <span class="has-cl-card-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </span>
+            <div><strong>Consultoría de IA para empresas</strong><span>Diagnóstico y roadmap antes de implementar</span></div>
+            <svg class="has-cl-card-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <!-- FIN: bloque-relacionado -->
+
+
+    <!-- INICIO: faq -->
+    <section class="has-cl-section" id="faq">
+      <div class="container">
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="has-cl-faq">
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿Qué hace exactamente un chatbot para atención al cliente?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>Un <strong>chatbot para atención al cliente</strong> responde dudas frecuentes, guía al usuario en pasos básicos y reduce tiempos de respuesta. Debe tener límites claros y derivar a una persona cuando el caso lo requiere.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿Cuándo conviene implementar un chatbot para atención al cliente?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>Conviene cuando hay repetición de consultas, tiempos de respuesta altos o falta de consistencia. Un <strong>chatbot para atención al cliente</strong> aporta orden y reduce fricción si el alcance está bien definido.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿Cuáles son las mejores prácticas chatbot atención al cliente para que funcione bien?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>Las <strong>mejores prácticas chatbot atención al cliente</strong> incluyen alcance claro, respuestas breves, opciones ordenadas, derivación sin fricción y revisión periódica con ejemplos reales.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿Qué diferencia hay entre chatbot para atención al cliente y chatbot para captación de leads?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>Un <strong>chatbot para atención al cliente</strong> prioriza resolver dudas y guiar. Un <strong>chatbot para captación de leads</strong> prioriza ordenar solicitudes, recopilar datos mínimos y facilitar el contacto con un siguiente paso claro.</p>
+            </div>
+          </div>
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿De qué depende el precio chatbot para atención al cliente empresa?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>El <strong>precio chatbot para atención al cliente empresa</strong> depende del alcance, del contenido que debe cubrir, del control de calidad (validación) y del mantenimiento (mejora continua).</p>
+            </div>
+          </div>
+
+          <div class="has-cl-faq-item">
+            <button class="has-cl-faq-question" aria-expanded="false">
+              ¿Cómo se asegura la calidad siguiendo mejores prácticas chatbot atención al cliente?
+              <svg class="has-cl-faq-icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="has-cl-faq-answer">
+              <p>Aplicando <strong>mejores prácticas chatbot atención al cliente</strong>: respuestas claras, límites definidos, derivación rápida a humano y revisión continua con conversaciones reales para ajustar sin perder consistencia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- FIN: faq -->
+
+
+    <!-- INICIO: cta-final -->
+    <section class="has-cl-cta-final" id="contacto-chatbot">
+      <div class="container">
+        <h2>Agenda una reunión y aterrizamos tu caso</h2>
+        <p>Si quieres implementar un <strong>chatbot para atención al cliente</strong> con calidad y un proceso claro, cuéntanos tu caso. Revisamos qué debe cubrir, aplicamos <strong>mejores prácticas chatbot atención al cliente</strong> desde el diseño y definimos el alcance para estimar el <strong>precio chatbot para atención al cliente empresa</strong> sin sorpresas.</p>
+        <a href="/contacto.html" class="has-cl-cta-button">Agenda tu reunión</a>
+      </div>
+    </section>
+    <!-- FIN: cta-final -->
+
+  </main>
+  <!-- FIN: main-content -->
+
+
+  <!-- INICIO: footer -->
+  <footer class="py-5 bg-dark footer" role="contentinfo">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2025</p>
+
+      <address class="contact-footer">
+        <p>Contacto: <a href="tel:+34650007976">+34 650 007 976</a></p>
+        <p>Mail: <a href="mailto:info@has-studio.com">info@has-studio.com</a></p>
+        <p>Dise&ntilde;o y desarollo web. Soluciones IA. Agencia en Barcelona</p>
+      </address>
+
+      <div class="label">
+        <div class="wcb carbonbadge wcb-d" id="wcb"></div>
+      </div>
+
+      <div class="policies">
+        <p>
+          <a href="https://has-studio.com/politica-privacidad.html">Politica de privacidad</a> <span>-</span>
+          <a href="https://has-studio.com/politica-cookies.html">Politica de cookies</a> <span>-</span>
+          <a href="https://has-studio.com/aviso-legal.html">Aviso legal</a>
+          <a href="https://www.instagram.com/has_barcelona/" rel="nofollow" target="_blank">
+            <svg height="97.395px" id="instagram" version="1.1" viewbox="0 0 97.395 97.395" width="97.395px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+              <g>
+                <path d="M12.501,0h72.393c6.875,0,12.5,5.09,12.5,12.5v72.395c0,7.41-5.625,12.5-12.5,12.5H12.501C5.624,97.395,0,92.305,0,84.895V12.5C0,5.09,5.624,0,12.501,0L12.501,0z M70.948,10.821c-2.412,0-4.383,1.972-4.383,4.385v10.495c0,2.412,1.971,4.385,4.383,4.385h11.008c2.412,0,4.385-1.973,4.385-4.385V15.206c0-2.413-1.973-4.385-4.385-4.385H70.948L70.948,10.821z M86.387,41.188h-8.572c0.811,2.648,1.25,5.453,1.25,8.355c0,16.2-13.556,29.332-30.275,29.332c-16.718,0-30.272-13.132-30.272-29.332c0-2.904,0.438-5.708,1.25-8.355h-8.945v41.141c0,2.129,1.742,3.872,3.872,3.872h67.822c2.13,0,3.872-1.742,3.872-3.872V41.188H86.387z M48.789,29.533c-10.802,0-19.56,8.485-19.56,18.953c0,10.468,8.758,18.953,19.56,18.953c10.803,0,19.562-8.485,19.562-18.953C68.351,38.018,59.593,29.533,48.789,29.533z"></path>
+              </g>
+            </svg>
+          </a>
+        </p>
+      </div>
+
+      <div class="arrow2 up"></div>
+
+      <div class="cookie-container">
+        <p>Utilizamos cookies para mejorar tu experiencia de navegaci&oacute;n. Aceptando, consientes el uso de cookies.
+          <button class="cookie-btn">Acepto</button>
+          <a href="https://has-studio.com/politica-cookies.html" id="moreInfo">+info</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN: footer -->
+
+  <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
+  <script src="js/js.js"></script>
+  <script src="js/spider.js"></script>
+
+  <!-- INICIO: script-faq-accordion -->
+  <script>
+    /**
+     * FAQ Accordion — Cluster IA (has-cl-)
+     */
+    (function() {
+      var faqButtons = document.querySelectorAll('.has-cl-faq-question');
+
+      faqButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          var item = this.parentElement;
+          var isOpen = item.classList.contains('is-open');
+
+          document.querySelectorAll('.has-cl-faq-item.is-open').forEach(function(openItem) {
+            openItem.classList.remove('is-open');
+            openItem.querySelector('.has-cl-faq-question').setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            item.classList.add('is-open');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+  </script>
+  <!-- FIN: script-faq-accordion -->
+
+</body>
+</html>

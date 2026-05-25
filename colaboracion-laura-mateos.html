@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAS Studio × Laura Mateos — Portfolio de proyectos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=sJWA73lxqZA8E3L3wltLc9USfqDi_TYhgcZkbFn1t5mUYadqF8B4jeB2ofB436qD9rvTCvGyYSjhKiao9uUY8KMYmhCOEI4-7yW-Y6i3PyuEDTz3iIwUgav46tkG8CTAYn6bXAB9AcOQpYa-2hRd6MKnNFN6p_UNU_bBQEqhouE" charset="UTF-8"></script><style>
+  :root {
+    --cyan: #00D9F8;
+    --yellow: #f3f979;
+    --orange: #EC542F;
+    --dark: #0c0c0c;
+    --mid: #1a1a1a;
+    --muted: #666;
+    --border: #e5e5e5;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: #f8f8f6; color: var(--dark); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248,248,246,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px; height: 105px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo img { width: 200px; }
+  .nav-logo .ast { color: var(--cyan); font-weight: 700; font-family: 'DM Sans', sans-serif; font-size: 22px; }
+  .nav-collab { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .nav-collab a { color: var(--dark); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--cyan); }
+  .nav-cta { background: var(--dark); color: #fff; padding: 10px 24px; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--cyan); color: var(--dark); }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 64px; }
+  .hero-left { background: var(--dark); padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 16px; margin-bottom: 36px; width: fit-content;
+    animation: fadeUp 0.5s ease both;
+  }
+  .hero-badge span { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+  .hero-badge strong { font-size: 12px; color: var(--cyan); font-weight: 500; }
+  .hero-title { font-size: clamp(38px, 4.5vw, 62px); line-height: 1.05; color: #fff; margin-bottom: 28px; animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-title em { font-style: italic; color: var(--cyan); }
+  .hero-body { font-size: 16px; line-height: 1.75; color: rgba(255,255,255,0.55); max-width: 440px; margin-bottom: 48px; animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-stats { display: flex; gap: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); animation: fadeUp 0.6s 0.3s ease both; }
+  .stat-number { font-size: 40px; color: var(--yellow); line-height: 1; }
+  .stat-label { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+  .hero-right { background: var(--cyan); padding: 80px 64px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-services-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.45); margin-bottom: 24px; }
+  .hero-services { list-style: none; }
+  .hero-services li { font-weight: 500;font-size: clamp(20px, 2.2vw, 30px); color: var(--dark); padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.12); display: flex; align-items: center; gap: 14px; }
+  .hero-services li .dot { width: 7px; height: 7px; background: var(--dark); border-radius: 50%; flex-shrink: 0; opacity: 0.25; }
+
+  /* TEAM */
+  .team-strip { background: var(--dark); padding: 2px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .team-card { background: var(--mid); padding: 52px 48px; display: flex; gap: 32px; align-items: flex-start; transition: background 0.2s; }
+  .team-card:hover { background: #222; }
+  .team-avatar { width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0; background: #2a2a2a; border: 2px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; }
+  .team-avatar-initials { font-size: 20px; color: rgba(255,255,255,0.4); }
+  .team-role { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+  .team-role.cyan { color: var(--cyan); }
+  .team-role.orange { color: var(--orange); }
+  .team-name { font-size: 24px; color: #fff; margin-bottom: 12px; }
+  .team-bio { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+  .team-skills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .team-skill { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 10px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.45); border: 1px solid rgba(255,255,255,0.08); }
+  .team-link { font-size: 12px; color: var(--cyan); text-decoration: none; border-bottom: 1px solid rgba(0,217,248,0.3); padding-bottom: 1px; }
+  .team-link:hover { border-color: var(--cyan); }
+
+  /* SECTION */
+  .section { padding: 100px 48px; }
+  .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 64px; gap: 32px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .section-title { font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1; color: var(--dark); max-width: 520px; }
+  .section-title em { font-style: italic; color: var(--orange); }
+  .section-desc { max-width: 340px; font-size: 15px; line-height: 1.7; color: var(--muted); text-align: right; }
+
+  /* FILTERS */
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
+  .filter-btn { padding: 8px 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover, .filter-btn.active { background: var(--dark); color: #fff; border-color: var(--dark); }
+
+  /* GRID */
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .project-card { position: relative; overflow: hidden; background: var(--mid); aspect-ratio: 4/3; cursor: pointer; }
+  .project-card.featured { grid-column: span 2; aspect-ratio: 16/9; }
+  .project-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--mid); transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); background-size: cover; background-position: top center; background-repeat: no-repeat; filter: opacity(0.5); }
+  .project-placeholder-text { font-size: 44px; color: rgba(255,255,255,0.06); letter-spacing: -2px; user-select: none; transition: opacity 0.3s; }
+  .project-card:hover .project-placeholder-text { opacity: 0; }
+  .project-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+  .project-card:hover .project-overlay { opacity: 1; }
+  .project-card:hover .project-placeholder { transform: scale(1.04); }
+
+  .collab-tag {
+    position: absolute; top: 20px; left: 20px;
+    background: rgba(0,217,248,0.2); border: 1px solid rgba(0,217,248,0.4);
+    padding: 4px 10px; font-size: 9px; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: #fff;
+    opacity: 0; transition: opacity 0.4s 0.05s ease;
+    backdrop-filter: blur(4px);
+  }
+  .project-card:hover .collab-tag { opacity: 1; }
+
+  .project-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+  .project-name { font-size: 24px; color: #fff; line-height: 1.2; margin-bottom: 8px; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+  .project-desc { font-size: 12px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 16px; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+  .project-services { display: flex; gap: 6px; flex-wrap: wrap; }
+  .service-pill { font-size: 9px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 8px; background: rgba(0,0,0,0.4); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px); }
+  .service-pill.accent { background: var(--cyan); color: var(--dark); border-color: var(--cyan); }
+  .project-link { position: absolute; top: 20px; right: 20px; width: 38px; height: 38px; background: var(--cyan); display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(-8px); transition: all 0.3s 0.1s ease; text-decoration: none; color: var(--dark); font-size: 15px; }
+  .project-card:hover .project-link { opacity: 1; transform: translateY(0); }
+
+  /* APPROACH */
+  .approach { background: var(--dark); padding: 2px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; }
+  .approach-item { background: var(--mid); padding: 52px 44px; transition: background 0.2s; }
+  .approach-item:hover { background: #222; }
+  .approach-number { font-size: 64px; color: rgba(255,255,255,0.04); line-height: 1; margin-bottom: 24px; }
+  .approach-title { font-size: 17px; font-weight: 500; color: #fff; margin-bottom: 10px; }
+  .approach-body { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.7; }
+
+  /* CTA */
+  .cta-section { background: var(--cyan); padding: 80px 48px; display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+  .cta-text {  font-size: clamp(26px, 3.2vw, 46px); color: var(--dark); max-width: 520px; line-height: 1.15; }
+  .cta-text em { font-style: italic; }
+  .cta-actions { display: flex; gap: 12px; flex-shrink: 0; }
+  .btn-primary { background: var(--dark); color: #fff; padding: 16px 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+  .btn-primary:hover { background: #fff; color: var(--dark); }
+  .btn-secondary { background: transparent; color: var(--dark); padding: 16px 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--dark); transition: all 0.2s; white-space: nowrap; }
+  .btn-secondary:hover { background: var(--dark); color: #fff; }
+
+  /* FOOTER */
+  footer { background: var(--dark); padding: 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.06); }
+  .footer-logo { font-size: 20px; color: #fff; display: flex; align-items: center; gap: 4px; }
+  .footer-logo .ast { color: var(--orange); font-weight: 700; font-family: 'DM Sans', sans-serif; }
+  .footer-info { font-size: 13px; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.7; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); text-align: right; }
+  .footer-contact a { color: var(--cyan); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left, .hero-right { padding: 64px 32px; min-height: 50vh; }
+    .team-strip { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr 1fr; }
+    .project-card.featured { grid-column: span 2; }
+    .approach { grid-template-columns: 1fr; }
+    .section-header { flex-direction: column; align-items: flex-start; }
+    .section-desc { text-align: left; }
+    nav { padding: 0 24px; }
+    .nav-collab { display: none; }
+    .section { padding: 64px 24px; }
+    .cta-section { flex-direction: column; padding: 64px 32px; }
+    footer { flex-direction: column; gap: 24px; text-align: center; }
+    .footer-contact { text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; aspect-ratio: 4/3; }
+    .team-card { flex-direction: column; gap: 20px; }
+  }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://has-studio.com" class="nav-logo"><img src="img/LOGO-HAS-2026-3.png" alt=""></a>
+  <div class="nav-collab">
+    <span>Portfolio en colaboración con</span>
+    <span style="color:var(--border)">×</span>
+    <a href="https://www.fayoscreativos.com" target="_blank">Laura Mateos</a>
+  </div>
+  <a href="https://has-studio.com/contacto.html" class="nav-cta">Contactar</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span>HAS Studio</span>
+      <span style="color:rgba(255,255,255,0.15)">×</span>
+      <strong>Laura Mateos</strong>
+    </div>
+    <h1 class="hero-title">Diseño web que <em>convierte</em> y posiciona</h1>
+    <p class="hero-body">Una selección de proyectos desarrollados en colaboración entre HAS Studio — desarrollo web, WordPress y SEO — y Laura Mateos, Directora de Arte con más de 20 años de experiencia en branding e identidad corporativa.</p>
+    <div class="hero-stats">
+      <div><div class="stat-number">+50</div><div class="stat-label">Proyectos</div></div>
+      <div><div class="stat-number">20+</div><div class="stat-label">Años combinados</div></div>
+      <div><div class="stat-number">2</div><div class="stat-label">Especialidades</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <p class="hero-services-label">Qué aportamos</p>
+    <ul class="hero-services">
+      <li><span class="dot"></span>Diseño web & E-commerce</li>
+      <li><span class="dot"></span>Branding & Identidad visual</li>
+      <li><span class="dot"></span>WordPress & WooCommerce</li>
+      <li><span class="dot"></span>SEO & Contenido</li>
+      <li><span class="dot"></span>Foto, Vídeo & Producción</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEAM -->
+<div class="team-strip">
+  <div class="team-card">
+    <div class="team-avatar"><span class="team-avatar-initials">HS</span></div>
+    <div class="team-info">
+      <p class="team-role cyan">Desarrollo Web · SEO · IA</p>
+      <h3 class="team-name">HAS Studio Barcelona</h3>
+      <p class="team-bio">Agencia de diseño web y estrategia digital especializada en WordPress, WooCommerce y Google Ads. Fundada en 2016, trabajamos con PYMEs que quieren una presencia digital que realmente funcione.</p>
+      <div class="team-skills">
+        <span class="team-skill">WordPress</span><span class="team-skill">WooCommerce</span>
+        <span class="team-skill">SEO</span><span class="team-skill">Google Ads</span>
+        <span class="team-skill">IA aplicada</span>
+      </div>
+      <a href="https://has-studio.com" target="_blank" class="team-link">has-studio.com ↗</a>
+    </div>
+  </div>
+  <div class="team-card">
+    <div class="team-avatar"><span class="team-avatar-initials">LM</span></div>
+    <div class="team-info">
+      <p class="team-role orange">Dirección de Arte · Diseño Gráfico</p>
+      <h3 class="team-name">Laura Mateos</h3>
+      <p class="team-bio">Directora de Arte y Directora Creativa con más de 20 años de experiencia en branding, identidad corporativa y diseño digital. Ha trabajado para clientes como Audi, Cofidis, Gas Natural y Red Bull. Actualmente Directora Creativa en FayosCreativos.</p>
+      <div class="team-skills">
+        <span class="team-skill">Branding</span><span class="team-skill">Identidad corporativa</span>
+        <span class="team-skill">Diseño digital</span><span class="team-skill">Packaging</span>
+        <span class="team-skill">Campañas</span>
+      </div>
+      <a href="https://www.fayoscreativos.com" target="_blank" class="team-link">fayoscreativos.com ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="section">
+  <div class="section-header">
+    <div>
+      <p class="section-label">Selección de trabajos</p>
+      <h2 class="section-title">Proyectos que <em>hablan</em> por sí solos</h2>
+    </div>
+    <p class="section-desc">Webs para clientes de distintos sectores. Estrategia, identidad visual y código trabajados de forma integrada.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProjects('all',this)">Todos</button>
+    <button class="filter-btn" onclick="filterProjects('gastronomia',this)">Gastronomía</button>
+    <button class="filter-btn" onclick="filterProjects('salud',this)">Salud & Bienestar</button>
+    <button class="filter-btn" onclick="filterProjects('cultura',this)">Cultura & Arte</button>
+    <button class="filter-btn" onclick="filterProjects('empresa',this)">Empresa & B2B</button>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card featured" data-category="cultura">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/federacion-pantalla.jpg');"><span class="project-placeholder-text">PANTALLA</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Cultura & Audiovisual</p>
+        <h3 class="project-name">Federación Pantalla</h3>
+        <p class="project-desc">Web institucional para la federación estatal de festivales de cine. Arquitectura de contenidos, CMS y directorio de festivales.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Diseño web</span><span class="service-pill">SEO</span></div>
+      </div>
+      <a href="https://www.federacionpantalla.es/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <div class="project-card" data-category="gastronomia">
+      <div class="project-placeholder"><span class="project-placeholder-text">PECCATO</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Gastronomía</p>
+        <h3 class="project-name">Peccato Italiano Pizzería</h3>
+        <p class="project-desc">WooCommerce con personalizador de pizzas, gestión de ingredientes y pedidos online. Diseño oscuro y apetitoso.</p>
+        <div class="project-services"><span class="service-pill accent">WooCommerce</span><span class="service-pill">WordPress</span><span class="service-pill">UX</span></div>
+      </div>
+      <a href="#" class="project-link">↗</a>
+    </div>
+
+    <div class="project-card" data-category="empresa">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/safic.jpg');"><span class="project-placeholder-text">SAFIC</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Industrial & B2B</p>
+        <h3 class="project-name">Safic</h3>
+        <p class="project-desc">Web corporativa internacional multilingüe. Catálogo de productos y posicionamiento B2B para empresa del sector industrial.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Multilingüe</span><span class="service-pill">B2B</span></div>
+      </div>
+      <a href="https://safic.eu/en/" target="_blank" class="project-link">↗</a>
+    </div>
+
+
+    <div class="project-card" data-category="gastronomia">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/aribau-de-nou.jpg');"><span class="project-placeholder-text">ARIBAU</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Hostelería</p>
+        <h3 class="project-name">Aribau de Nou</h3>
+        <p class="project-desc">Web de bar-restaurante con carta online, reservas e identidad visual aplicada a digital. Carácter Barcelona.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Diseño</span><span class="service-pill">Carta digital</span></div>
+      </div>
+      <a href="https://aribau.denou.bar/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <div class="project-card" data-category="salud">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/foto_clinicadentalsolson.jpg');"><span class="project-placeholder-text">SOLSONA</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Salud</p>
+        <h3 class="project-name">Clínica Dental Solsona</h3>
+        <p class="project-desc">Web corporativa bilingüe para clínica dental. Diseño limpio orientado a captación de pacientes y SEO local.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">ES/CA</span><span class="service-pill">SEO Local</span></div>
+      </div>
+      <a href="https://www.clinicadentalsolsona.com/es/" target="_blank" class="project-link">↗</a>
+    </div>
+    
+    <div class="project-card" data-category="cultura">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/lecann.jpg');"><span class="project-placeholder-text">LECANN</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Lifestyle & Cultura</p>
+        <h3 class="project-name">Le Cann</h3>
+        <p class="project-desc">Proyecto de identidad digital con fuerte personality de marca. Web editorial con diseño diferencial y atención al detalle visual.</p>
+        <div class="project-services"><span class="service-pill accent">Diseño web</span><span class="service-pill">WordPress</span><span class="service-pill">Identidad visual</span></div>
+      </div>
+      <a href="https://lecann.es/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <div class="project-card featured" data-category="salud">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/fontcare.jpg');"><span class="project-placeholder-text">FONTCARE</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Salud & Bienestar</p>
+        <h3 class="project-name">Fontcare</h3>
+        <p class="project-desc">Web de clínica de salud y bienestar. Diseño cálido y profesional, optimizada para SEO local y conversión de nuevos pacientes.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">SEO</span><span class="service-pill">Diseño</span></div>
+      </div>
+      <a href="https://fontcare.es/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <div class="project-card" data-category="cultura">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/nebula-estudio.jpeg');"><span class="project-placeholder-text">NEBULA</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Diseño & Creatividad</p>
+        <h3 class="project-name">Nebula Estudio BCN</h3>
+        <p class="project-desc">Portfolio de estudio de diseño gráfico barcelonés. Diseño conceptual, tipografía curada y experiencia editorial online.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Portfolio</span><span class="service-pill">Diseño</span></div>
+      </div>
+      <a href="https://nebulastudiobcn.es/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <!-- SOS Global Future -->
+    <div class="project-card" data-category="empresa">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/sos-global-future.png');"><span class="project-placeholder-text">SOS</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">ONG & Impacto Social</p>
+        <h3 class="project-name">SOS Global Future</h3>
+        <p class="project-desc">Landing page de alto impacto visual para ONG internacional. Diseño, HTML y CSS a medida sin WordPress, optimizada para conversión y carga rápida.</p>
+        <div class="project-services"><span class="service-pill accent">HTML / CSS</span><span class="service-pill">Diseño web</span><span class="service-pill">Landing page</span></div>
+      </div>
+      <a href="https://sosglobalfuture.org/" target="_blank" class="project-link">↗</a>
+    </div>
+  
+    <div class="project-card" data-category="cultura">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/tirant-milles.png');"><span class="project-placeholder-text">TIRANT</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Aventura & Turismo</p>
+        <h3 class="project-name">Tirant Milles</h3>
+        <p class="project-desc">Web de actividades de montaña y acuáticas. Diseño visual e inmersivo para conectar con el aventurero urbano.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Turismo activo</span><span class="service-pill">Diseño</span></div>
+      </div>
+      <a href="https://tirantmilles.com/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <!-- JOSEP CANO - featured, full width -->
+    <div class="project-card" data-category="cultura" style="grid-column: span 3; aspect-ratio: 21/9;">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/josep-cano.png');">
+        <span class="project-placeholder-text" style="font-size: 72px; letter-spacing: -4px; color: rgba(255,255,255,0.04);">JOSEP CANO</span>
+      </div>
+      <div class="project-overlay" style="border-left: 3px solid var(--cyan);">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Arquitectura Interior · Diseño Inmersivo</p>
+        <h3 class="project-name" style="font-size: 32px;">Josep Cano — Arquitecto</h3>
+        <p class="project-desc">Portfolio de arquitecto e interiorista con experiencia inmersiva en 3D y Three.js. Vídeo de fondo, navegación fluida y presentación cinematográfica de proyectos: Arquitectura Interior, Muebles de Autor, Experiencias Efímeras y Creative Hubs.</p>
+        <div class="project-services">
+          <span class="service-pill accent">Three.js</span>
+          <span class="service-pill">3D Web</span>
+          <span class="service-pill">Diseño web</span>
+          <span class="service-pill">Vídeo</span>
+          <span class="service-pill">Portfolio</span>
+        </div>
+      </div>
+      <a href="https://staging.temp-web.click/" target="_blank" class="project-link">↗</a>
+    </div>
+
+
+    <!-- Clubes Barcelona -->
+    <div class="project-card" data-category="empresa">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/clubes-barcelona.jpg');"><span class="project-placeholder-text">CLUBES BCN</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Deporte & Lifestyle</p>
+        <h3 class="project-name">Clubes Barcelona</h3>
+        <p class="project-desc">Tienda online para directorio de clubes deportivos y de ocio en Barcelona. WooCommerce con catálogo, membresías y sistema de reservas integrado.</p>
+        <div class="project-services"><span class="service-pill accent">WooCommerce</span><span class="service-pill">Shop online</span><span class="service-pill">WordPress</span></div>
+      </div>
+      <a href="https://clubesbarcelona.com/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <!-- Beautiful Glitch Pizza -->
+    <div class="project-card" data-category="cultura">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/beautiful-glitch-pizza.png');">
+        <span class="project-placeholder-text" style="color: rgba(243,249,121,0.07);">GLITCH</span>
+      </div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Videojuegos & Cultura Digital</p>
+        <h3 class="project-name">Beautiful Glitch Pizza</h3>
+        <p class="project-desc">Web para estudio de videojuegos indie. Diseño con estética glitch y cultura digital, presentación de juegos y experiencia de marca inmersiva y experimental.</p>
+        <div class="project-services"><span class="service-pill accent">Diseño web</span><span class="service-pill">Gaming</span><span class="service-pill">Identidad visual</span></div>
+      </div>
+      <a href="https://beautifulglitch.pizza/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    
+    <div class="project-card" data-category="empresa">
+      <div class="project-placeholder" style="background-image: url('img/black-and-gold-has.jpg');"><span class="project-placeholder-text">BLACK&GOLD</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Lifestyle</p>
+        <h3 class="project-name">Black & Gold BCN</h3>
+        <p class="project-desc">E-commerce con branding premium. Diseño de producto, fotografía aplicada y experiencia de compra de alto nivel.</p>
+        <div class="project-services"><span class="service-pill accent">WooCommerce</span><span class="service-pill">Branding</span><span class="service-pill">E-commerce</span></div>
+      </div>
+      <a href="https://blackngoldbcn.es/" target="_blank" class="project-link">↗</a>
+    </div>
+
+    <!-- Fontcare / Gran Fontaine -->
+    <!-- <div class="project-card featured" data-category="salud">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/fontcare.png');"><span class="project-placeholder-text">FONTCARE</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Salud & Laboratorio Farmacéutico</p>
+        <h3 class="project-name">Fontcare / Gran Fontaine</h3>
+        <p class="project-desc">Ecosistema digital para el grupo Laboratoire Gran Fontaine: web de clínica (fontcare.es) y web de marca de complementos nutricionales (fontactiv.com). Diseño coherente de marca, WordPress y estrategia SEO para dos audiencias distintas.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Branding</span><span class="service-pill">SEO</span><span class="service-pill">Ecosistema digital</span></div>
+      </div>
+      <a href="https://fontcare.es/" target="_blank" class="project-link">↗</a>
+    </div> -->
+
+    <!-- Taxi Barcelona 24h - al final -->
+    <!-- <div class="project-card" data-category="empresa">
+      <div class="project-placeholder" style="background-image: url('assets/images/projects/taxi-barcelona-24h.png');"><span class="project-placeholder-text">TAXI BCN</span></div>
+      <div class="project-overlay">
+        <div class="collab-tag">HAS Studio × Laura Mateos</div>
+        <p class="project-tag">Transporte & Reservas Online</p>
+        <h3 class="project-name">Taxi Barcelona 24h</h3>
+        <p class="project-desc">Web de reservas de taxi online para Barcelona. Sistema de booking integrado, tarifas y cobertura de aeropuerto y servicios de larga distancia.</p>
+        <div class="project-services"><span class="service-pill accent">WordPress</span><span class="service-pill">Reservas online</span><span class="service-pill">Transporte</span></div>
+      </div>
+      <a href="https://taxibarcelona24h.com/" target="_blank" class="project-link">↗</a>
+    </div> -->
+
+  </div>
+</section>
+
+<!-- APPROACH -->
+<div class="approach">
+  <div class="approach-item">
+    <div class="approach-number">01</div>
+    <h3 class="approach-title">Estrategia primero</h3>
+    <p class="approach-body">Antes de diseñar, entendemos el negocio, el sector y el usuario. Cada decisión visual tiene un porqué funcional.</p>
+  </div>
+  <div class="approach-item">
+    <div class="approach-number">02</div>
+    <h3 class="approach-title">Arte + código integrado</h3>
+    <p class="approach-body">Dirección de Arte y desarrollo web trabajados en paralelo. Más coherencia, más velocidad, sin pérdidas en la traducción.</p>
+  </div>
+  <div class="approach-item">
+    <div class="approach-number">03</div>
+    <h3 class="approach-title">Resultados medibles</h3>
+    <p class="approach-body">Webs optimizadas para SEO, velocidad y conversión. No entregamos proyectos bonitos que no funcionan.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-text">¿Tienes clientes que necesitan una web que <em>realmente funcione</em>?</h2>
+  <div class="cta-actions">
+    <a href="https://has-studio.com/contacto.html" class="btn-primary">Hablemos</a>
+    <a href="https://has-studio.com" class="btn-secondary">Ver más servicios</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">HAS<span class="ast">✳</span></div>
+  <div class="footer-info">
+    HAS Studio Barcelona × Laura Mateos<br>
+    <span style="font-size:12px; opacity:0.6">has-studio.com · fayoscreativos.com</span>
+  </div>
+  <div class="footer-contact">
+    <a href="mailto:info@has-studio.com">info@has-studio.com</a><br>+34 650 007 976
+  </div>
+</footer>
+
+<script>
+  function filterProjects(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
